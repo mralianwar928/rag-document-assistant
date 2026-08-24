@@ -33,10 +33,7 @@ python -m src.rag_documentassistant.app            # ask questions
 
 Retrieval and generation are evaluated separately (`python evals/run_evals.py`):
 
-| Metric | Result |
-|---|---|
-| Retrieval hit-rate (right paper in top-k) | _your number_ |
-| Refuses out-of-corpus questions | _your number_ |
+
 
 ## Notes
 
