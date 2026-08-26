@@ -9,7 +9,7 @@ guessing.
 
 ## How it works
 
-Ingestion runs once — papers are chunked, embedded locally, and stored in Chroma. Each
+Ingestion runs once when papers are chunked, embedded locally, and stored in Chroma. Each
 query embeds the question, retrieves the closest chunks, and asks the LLM to answer using
 only those, citing the paper titles. Grounding plus refusal on out-of-scope questions is
 what separates this from a plain chatbot.
@@ -37,6 +37,6 @@ Retrieval and generation are evaluated separately (`python evals/run_evals.py`):
 
 ## Notes
 
-Embeddings run locally, so only generation calls the API — free and offline for the heavy
+Embeddings run locally, so only generation calls the API free and offline for the heavy
 step, which is how teams keep RAG costs down. The chat model is a one-line config value, so
 it's trivial to swap when a provider deprecates a model.
